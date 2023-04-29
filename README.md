@@ -1,4 +1,4 @@
-# Implementing Basic Forwarding
+# Super Spreader Attack and Mitigation
 
 ```
                    +--+
@@ -23,40 +23,42 @@
 
 ## Introduction
 
-The objective of this exercise is to write a P4 program that
-implements basic forwarding. To keep things simple, we will just
-implement forwarding for IPv4.
 
-With IPv4 forwarding, the switch must perform the following actions
-for every packet: (i) update the source and destination MAC addresses,
-(ii) decrement the time-to-live (TTL) in the IP header, and (iii)
-forward the packet out the appropriate port.
+The objective of this project is to provide an efficient and scalable solution for detecting and mitigating super spreader attacks in real-time using programmable switches. The project aims to implement a novel super spreader monitor that uses a Geometric-Min Filter, an adaptive sampling technique, to accurately measure flow spread without incurring high memory overhead or requiring duplicate removal. The project will also evaluate the performance of the system using real-world traffic traces and provide a codebase that can be easily integrated into existing network infrastructure. The end goal is to improve network security and reduce the risk of damage caused by super spreader attacks. 
 
-Your switch will have a single table, which the control plane will
-populate with static rules. Each rule will map an IP address to the
-MAC address and output port for the next hop. We have already defined
-the control plane rules, so you only need to implement the data plane
-logic of your P4 program.
+The Github repository will contain the source code, documentation, and examples necessary to implement and deploy the system in a production environment.
 
 
 ## How to run
 
-Run the topology:
+Provide required Permissions to the Working Directory:
+
+```
+chmod 777 /path/to/directory
+```
+
+
+Intiation of Topology in P4 Environment:
 
 ```
 sudo p4run
 ```
 
-
-Try to ping from one host to another:
-
-```
-mininet> h1 ping h2
-```
-
-Ping from all host pairs to test for connectivity:
+Open two different Terminals of the Working Directory and execute the below commands:
 
 ```
-mininet> pingall
+sudo python sniff.py
+```
+
+
+```
+sudo python digest.py
+```
+### Intiate the Attack
+##### Assume that h1 is the attacker host and h2,h3 & h4 are the hosts which are attacked.
+In the mininet prompt execute the below commands:
+
+```
+
 ```
 
