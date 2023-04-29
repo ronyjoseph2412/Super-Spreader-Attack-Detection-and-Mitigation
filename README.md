@@ -59,6 +59,17 @@ sudo python digest.py
 In the mininet prompt execute the below commands:
 
 ```
-
+xterm h1
+xterm h2
+xterm h3
+xterm h4
 ```
 
+From node "h1":
+``` 
+python send.py python  3 10.0.2.2,10.0.3.3,10.0.3.4 32 100
+```
+From node "h2", "h3" & "h4":
+``` 
+python receive.py
+```
