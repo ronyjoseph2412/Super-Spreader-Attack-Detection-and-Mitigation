@@ -73,4 +73,5 @@ From node "h2", "h3" & "h4":
 ``` 
 python receive.py
 ```
-### Now you can see that the attack can be demonstrated
+Now you can see that the attack can be demonstrated and Packets are dropped after threshold.
+
