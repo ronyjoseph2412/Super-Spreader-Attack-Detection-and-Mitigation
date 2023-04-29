@@ -59,10 +59,10 @@ sudo python digest.py
 In the mininet prompt execute the below commands:
 
 ```
-xterm h1
-xterm h2
-xterm h3
-xterm h4
+mininet> xterm h1
+mininet> xterm h2
+mininet> xterm h3
+mininet> xterm h4
 ```
 
 From node "h1":
@@ -73,3 +73,4 @@ From node "h2", "h3" & "h4":
 ``` 
 python receive.py
 ```
+### Now you can see that the attack can be demonstrated
